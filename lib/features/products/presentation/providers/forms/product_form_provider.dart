@@ -47,7 +47,8 @@ class ProductFormNotifier extends StateNotifier<ProductFormState> {
     _touchedEverything();
     if (!state.isFormValid) return false;
 
-    if (onSubmitCallback == null) return false;
+    //TODO: regresar aqui
+    // if (onSubmitCallback == null) return false;
 
     final productLike = {
       'id': state.id,
@@ -131,6 +132,10 @@ class ProductFormNotifier extends StateNotifier<ProductFormState> {
     state = state.copyWith(
       sizes: sizes,
     );
+  }
+
+  void onGenderChanged(String gender) {
+    state = state.copyWith(gender: gender);
   }
 
   void onDescriptionChanged(String description) {
