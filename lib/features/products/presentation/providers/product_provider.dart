@@ -30,8 +30,8 @@ class ProductNotifier extends StateNotifier<ProductState> {
       description: '',
       slug: '',
       stock: 0,
-      sizes: [],
-      gender: 'men',
+      sizes: [''],
+      gender: '',
       tags: [],
       images: [],
     );
